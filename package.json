@@ -1,0 +1,19 @@
+{
+  "name": "strings-finder",
+  "version": "1.0.0",
+  "description": "get all strings in any given javascript file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weizman/strings-finder.git"
+  },
+  "author": "weizman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weizman/strings-finder/issues"
+  },
+  "homepage": "https://github.com/weizman/strings-finder#readme"
+}
