@@ -10,11 +10,15 @@ function find (str, cb, withQuotes = false) {
   }
 }
 
-function replace (str, cb, withQuotes = false) {
+function replace (str, cb, withQuotes = false, allOccurrences = false) {
   let output = str;
 
   function _replace (res) {
-    output = output.replace (res, cb (res));
+    if (allOccurrences) {
+      output = output.split (res).join (cb (res));
+    } else {
+      output = output.replace (res, cb (res));
+    }
   }
 
   find (str, _replace, withQuotes);
