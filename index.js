@@ -13,7 +13,7 @@ function find (str, cb, withQuotes = false) {
 function replace (str, cb, withQuotes = false, allOccurrences = false) {
   let output = str;
 
-  function _replace (res) {
+  function _replace (res, index) {
     if (allOccurrences) {
       output = output.split (res).join (cb (res, index));
     } else {
