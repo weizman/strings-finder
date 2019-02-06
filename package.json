@@ -1,6 +1,6 @@
 {
   "name": "strings-finder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "get all strings in any given javascript file",
   "main": "index.js",
   "scripts": {
