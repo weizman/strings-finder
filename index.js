@@ -5,7 +5,7 @@ function find (str, cb, withQuotes = false) {
   let res = REG_EXP.exec (str);
 
   while (res) {
-    cb (withQuotes ? res[0] : res[0].slice (1, res[0].length - 1));
+    cb (withQuotes ? res[0] : res[0].slice (1, res[0].length - 1), res.index);
     res = REG_EXP.exec (str);
   }
 }
@@ -15,9 +15,9 @@ function replace (str, cb, withQuotes = false, allOccurrences = false) {
 
   function _replace (res) {
     if (allOccurrences) {
-      output = output.split (res).join (cb (res));
+      output = output.split (res).join (cb (res, index));
     } else {
-      output = output.replace (res, cb (res));
+      output = output.replace (res, cb (res, index));
     }
   }
 
